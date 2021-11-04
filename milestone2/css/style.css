@@ -1,0 +1,161 @@
+
+/************color***********/
+.recivedGreen{ background-color: green;
+}
+.icon{ color: #B2B1B0; 
+}
+.chatContainer, .profileUser, .avatardContainer, .newMessageNotification i, .bg-w{
+    background-color: #ffffff; 
+}
+
+.boxChatUserName, .searchcUserName{
+    background-color: #fafafa;
+}
+.newMessageNotification a{
+    color: #507484;
+}
+.preview, .date-card{
+    color: #B6B9BC;
+}
+
+.box-boolzapp, .boolzapp-window{ position: relative;}
+
+.top-stripe{    background-color: #0C9688;    height: 100px;}
+
+.bottom-stripe{
+    background-color: #D8DBD7;  height: 700px; }
+
+.boolzapp-window{
+    margin: 0 auto;
+    z-index: 1;
+    top: 70px;
+}
+
+.box-all{ margin: 0 auto; width: 100%; }
+.chatBox, .boolzapp-window{ width: 80%; }
+
+.chatBox input{ border-radius: 10px; }
+
+.search-box{     
+     border: 1px solid #D6D6D6;
+        border-radius: 5px;}
+
+.side-bar{
+    width: 40%;
+}
+.middle-section{
+    width: 60%;
+    height: 50px;
+}
+
+.chatUsernames, .selectedUserIcon{
+    background-color: #EAEAEA;
+    height: 60px;
+    border: 1px solid #D6D6D6;
+}
+.chatFooter{
+    background-color: #F3EEEB;
+    height: 60px;
+    border: 1px solid #D6D6D6;
+}
+
+.sideBarTopIcon{
+    height: 60px;
+    background-color: #EAEAEA;
+}
+
+.cardPhoto{
+   width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.cardPhoto img{
+    width: 100%;
+}
+
+.icon i {
+    margin: 0 10px;
+}
+.newMessageNotification i{
+    font-size: 30px;
+    color: #8FD9FB;
+    margin-left: 15px;
+    margin-right: 10px; 
+    border-radius: 50px;
+    width: 60px;
+    height: 60px;
+    padding: 12px;
+    text-align: center;
+}
+.infoProfile, .newMessageNotification{
+    line-height: 5px;
+}
+
+.infoProfile{
+    width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.newMessageNotification{
+    background-color: #8FD9FB;
+}
+
+.searchcUserName{
+    padding: 5px;
+}
+
+.chatContainer, .boxChatUserName{
+    padding-right: 15px;
+}
+
+.chatContainer{
+    height: calc(700px - 60px);
+    display: flex;
+}
+.boxChatUserName{
+    display: flex;
+    flex-grow: 0;
+    overflow: auto;
+    height: 560px;
+}
+.date-card{
+    position: absolute;
+    right: 10px;
+}
+.profileUser{
+    height: 90px;
+    border-top: 1px solid #E8E8E8;   
+    position: relative;
+    
+}
+.chatMessageBox{
+    background-image: url('../img/mine.jpg');
+    flex-grow: 1;
+}
+.footerIcon{
+    padding: 0 15px;
+    color: #6B7275;
+    font-size: 30px;
+}
+
+.messageSend, .messageRecived{
+    flex-grow: 1;
+}
+.messageSend{
+    margin-top: 20px;
+}
+
+li{
+    max-width: 200px;
+    margin: 10px 0;
+}
+
+.avatardContainer{
+    border: 1px solid  #E8E8E8;
+    height: 100%;
+}
