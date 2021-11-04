@@ -4,15 +4,18 @@
 }
 .icon{ color: #B2B1B0; 
 }
-.chatContainer, .profileUser, .avatardContainer, .newMessageNotification i{
+.chatContainer, .profileUser, .avatardContainer, .newMessageNotification i, .bg-w{
     background-color: #ffffff; 
 }
 
 .boxChatUserName, .searchcUserName{
     background-color: #fafafa;
 }
-.newMessageNotification a, .preview{
+.newMessageNotification a{
     color: #507484;
+}
+.preview, .date-card{
+    color: #B6B9BC;
 }
 
 .box-boolzapp, .boolzapp-window{ position: relative;}
@@ -33,7 +36,9 @@
 
 .chatBox input{ border-radius: 10px; }
 
-
+.search-box{     
+     border: 1px solid #D6D6D6;
+        border-radius: 5px;}
 
 .side-bar{
     width: 40%;
@@ -88,6 +93,14 @@
     line-height: 5px;
 }
 
+.infoProfile{
+    width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
 .newMessageNotification{
     background-color: #8FD9FB;
 }
@@ -110,9 +123,15 @@
     overflow: auto;
     height: 560px;
 }
+.date-card{
+    position: absolute;
+    right: 10px;
+}
 .profileUser{
     height: 90px;
     border-top: 1px solid #E8E8E8;   
+    position: relative;
+    
 }
 .chatMessageBox{
     background-image: url('../img/mine.jpg');

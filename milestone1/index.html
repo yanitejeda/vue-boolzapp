@@ -55,8 +55,10 @@
                                 </div> 
 
                                 <!-- varra di ricerca contatti -->
-                                <div class="searchcUserName">
-                                    <input  type="text"class="form-control" placeholder=" cerca o inizia una nuova chat..." >
+                                <div class="searchcUserName  ">
+                                   <div class="d-flex search-box "> <span  class="input-group-text border-0 bg-w icon" id="basic-addon1"><i class="fas fa-search"></i></span>
+                                    <input  type="text" class="form-control border-0" placeholder=" cerca o inizia una nuova chat..." >
+                                    </div>
                                 </div>
 
                                 <!-- elenco dei contatti con chat attivi  -->
@@ -64,15 +66,17 @@
                                     <div class="avatardContainer"  >
                                         <div class="profileUser d-flex" v-for="elenco in contact">
                                             
-                                            <div class="d-flex  align-items-center mx-2" >
+                                            <div class="d-flex  py-3 mx-2" >
 
                                                 <div class="cardPhoto" >
                                                     <img v-bind:src="elenco.avatar" alt="elenco.name">
                                                 </div>
-                                                <div class="infoProfile px-3">
+                                                
+                                                <div class="infoProfile py-2 px-3">
                                                     <h6>{{elenco.name}} </h6>
-                                                    <span class="preview">{{elenco.message}} </span> 
+                                                    <span class="preview">{{elenco.messages[elenco.messages.length - 1 ].text}} </span> 
                                                 </div>
+                                                <div class="date-card"><span>{{elenco.messages[elenco.messages.length - 1 ].date}}</span></div>
                                             </div>
                                         </div>
                                 
@@ -91,7 +95,7 @@
                                         <div class="cardPhoto">
                                             <img src="img/minion.jpg" alt="">
                                         </div>
-                                        <div class="infoProfile px-3">
+                                        <div class="infoProfile py-2 px-3">
                                             <h6>Steav</h6>
                                             <span class="preview">info testo chat</span>
                                         </div>
