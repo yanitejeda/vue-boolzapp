@@ -1,0 +1,162 @@
+
+.box-boolzapp{ position: relative;}
+
+.top-stripe{    background-color: #0C9688;    height: 100px;}
+
+.bottom-stripe{
+    background-color: #D8DBD7;  height: 700px; }
+
+.boolzapp-window{
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    top: 70px;
+}
+
+.box-all{
+    margin: 0 auto;
+    width: 100%;
+}
+.chatBox{
+    width: 80%;
+}
+.chatBox input{
+    border-radius: 10px;
+}
+
+
+/*********************sidebar********************/
+.side-bar{
+    width: 40%;
+}
+.middle-section{
+    width: 60%;
+    height: 50px;
+    background-color: rgb(168, 11, 38);
+}
+
+.chatUsernames, .selectedUserIcon{
+    background-color: #EAEAEA;
+    height: 60px;
+    border: 1px solid #D6D6D6;
+}
+.chatFooter{
+    background-color: #F3EEEB;
+    height: 60px;
+    border: 1px solid #D6D6D6;
+}
+
+.sideBarTopIcon{
+    height: 60px;
+    background-color: #EAEAEA;
+}
+
+.cardPhoto{
+   width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.cardPhoto img{
+    width: 100%;
+}
+
+.sideBarTopIcon{
+    display: flex;
+}
+
+.icon{
+    color: #B2B1B0;
+}
+.icon i {
+    margin: 0 10px;
+}
+.newMessageNotification i{
+    font-size: 30px;
+    color: #8FD9FB;
+    margin-left: 15px;
+    margin-right: 10px; 
+    border-radius: 50px;
+    width: 60px;
+    height: 60px;
+    padding: 12px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.newMessageNotification{
+    background-color: #8FD9FB;
+    line-height: 5px;
+}
+
+.newMessageNotification a, .preview{
+    color: #507484;
+}
+.boxChatUserName, .searchcUserName{
+    background-color: #fafafa;
+}
+.searchcUserName{
+    padding: 5px;
+}
+
+.chatContainer, .boxChatUserName{
+    padding-right: 15px;
+}
+.chatContainer, .profileUser{
+    background-color: #ffffff;
+
+} 
+
+.chatContainer{
+    height: calc(700px - 60px);
+    display: flex;
+}
+.boxChatUserName{
+    display: flex;
+    flex-grow: 0;
+    overflow: auto;
+    height: 560px;
+}
+.profileUser{
+    height: 90px;
+    border-top: 1px solid #E8E8E8;   
+}
+.infoProfile{
+    line-height: 5px;
+}
+
+.chatMessageBox{
+    background-image: url('../img/mine.jpg');
+    flex-grow: 1;
+}
+.footerIcon{
+    padding: 0 15px;
+    color: #6B7275;
+    font-size: 30px;
+}
+
+.messageSend, .messageRecived{
+    flex-grow: 1;
+}
+.messageSend{
+    margin-top: 20px;
+}
+
+li{
+    max-width: 200px;
+    margin: 10px 0;
+}
+.recivedGreen{
+    background-color: green;
+}
+
+.listGroup{
+    align-items: center;
+}
+.avatardContainer{
+    background-color: #ffffff;
+    border: 1px solid  #E8E8E8;
+    height: 100%;
+}
