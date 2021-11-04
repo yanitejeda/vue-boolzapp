@@ -1,5 +1,21 @@
 
-.box-boolzapp{ position: relative;}
+/************color***********/
+.recivedGreen{ background-color: green;
+}
+.icon{ color: #B2B1B0; 
+}
+.chatContainer, .profileUser, .avatardContainer, .newMessageNotification i{
+    background-color: #ffffff; 
+}
+
+.boxChatUserName, .searchcUserName{
+    background-color: #fafafa;
+}
+.newMessageNotification a, .preview{
+    color: #507484;
+}
+
+.box-boolzapp, .boolzapp-window{ position: relative;}
 
 .top-stripe{    background-color: #0C9688;    height: 100px;}
 
@@ -7,33 +23,24 @@
     background-color: #D8DBD7;  height: 700px; }
 
 .boolzapp-window{
-    width: 80%;
     margin: 0 auto;
-    position: relative;
     z-index: 1;
     top: 70px;
 }
 
-.box-all{
-    margin: 0 auto;
-    width: 100%;
-}
-.chatBox{
-    width: 80%;
-}
-.chatBox input{
-    border-radius: 10px;
-}
+.box-all{ margin: 0 auto; width: 100%; }
+.chatBox, .boolzapp-window{ width: 80%; }
+
+.chatBox input{ border-radius: 10px; }
 
 
-/*********************sidebar********************/
+
 .side-bar{
     width: 40%;
 }
 .middle-section{
     width: 60%;
     height: 50px;
-    background-color: rgb(168, 11, 38);
 }
 
 .chatUsernames, .selectedUserIcon{
@@ -63,13 +70,6 @@
     width: 100%;
 }
 
-.sideBarTopIcon{
-    display: flex;
-}
-
-.icon{
-    color: #B2B1B0;
-}
 .icon i {
     margin: 0 10px;
 }
@@ -83,20 +83,15 @@
     height: 60px;
     padding: 12px;
     text-align: center;
-    background-color: #ffffff;
+}
+.infoProfile, .newMessageNotification{
+    line-height: 5px;
 }
 
 .newMessageNotification{
     background-color: #8FD9FB;
-    line-height: 5px;
 }
 
-.newMessageNotification a, .preview{
-    color: #507484;
-}
-.boxChatUserName, .searchcUserName{
-    background-color: #fafafa;
-}
 .searchcUserName{
     padding: 5px;
 }
@@ -104,10 +99,6 @@
 .chatContainer, .boxChatUserName{
     padding-right: 15px;
 }
-.chatContainer, .profileUser{
-    background-color: #ffffff;
-
-} 
 
 .chatContainer{
     height: calc(700px - 60px);
@@ -123,10 +114,6 @@
     height: 90px;
     border-top: 1px solid #E8E8E8;   
 }
-.infoProfile{
-    line-height: 5px;
-}
-
 .chatMessageBox{
     background-image: url('../img/mine.jpg');
     flex-grow: 1;
@@ -148,15 +135,8 @@ li{
     max-width: 200px;
     margin: 10px 0;
 }
-.recivedGreen{
-    background-color: green;
-}
 
-.listGroup{
-    align-items: center;
-}
 .avatardContainer{
-    background-color: #ffffff;
     border: 1px solid  #E8E8E8;
     height: 100%;
 }

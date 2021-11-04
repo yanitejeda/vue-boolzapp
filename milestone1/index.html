@@ -22,128 +22,133 @@
            <div class="box-boolzapp">
                <div class="boolzapp-window d-flex">
                   <div class="d-flex box-all">
+                        <!-- side bar top -->
+                        <div class="side-bar">
+                            <div class="chatUsernames">
 
-                    <!-- side bar top -->
-                    <div class="side-bar">
-                        <div class="chatUsernames">
-                            <div class="sideBarTopIcon justify-content-between align-items-center">
-                               <div class="d-flex align-items-center mx-2">
-                                     <div class="cardPhoto">
-                                         <img src="img/Bob.jpg" alt="">
-                                     </div>
-                                     <div class="infoProfile px-3">
-                                         <h6>Bob </h6>
-                                         
-                                     </div>
-                               </div>
- 
+                                <!-- foto personale -->
+                                <div class="sideBarTopIcon d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center mx-2">
+                                        <div class="cardPhoto">
+                                            <img src="img/Bob.jpg" alt="">
+                                        </div>
+                                        <div class="infoProfile px-3">
+                                            <h6>Bob </h6>
+                                        </div>
+                                </div>
+
+                                <!-- icone innattive -->
+                                    <div class="icon">
+                                        <i class="fas fa-circle-notch"></i>
+                                        <i class="fas fa-comment-alt"></i>
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </div>
+                                </div>
+
+                                <!-- notifiche new message -->
+                                <div class="py-3 d-flex newMessageNotification align-items-center">
+                                        <i class="fas fa-bell-slash"></i>
+                                    <div>
+                                        <h6>Ricevi notifiche di nuovi messaggi</h6>
+                                        <a href="#">Attiva notifiche desktop</a>
+                                    </div>
+                                </div> 
+
+                                <!-- varra di ricerca contatti -->
+                                <div class="searchcUserName">
+                                    <input  type="text"class="form-control" placeholder=" cerca o inizia una nuova chat..." >
+                                </div>
+
+                                <!-- elenco dei contatti con chat attivi  -->
+                                <div class="boxChatUserName flex-column">
+                                    <div class="avatardContainer"  >
+                                        <div class="profileUser d-flex" v-for="elenco in contact">
+                                            
+                                            <div class="d-flex  align-items-center mx-2" >
+
+                                                <div class="cardPhoto" >
+                                                    <img v-bind:src="elenco.avatar" alt="elenco.name">
+                                                </div>
+                                                <div class="infoProfile px-3">
+                                                    <h6>{{elenco.name}} </h6>
+                                                    <span class="preview">{{elenco.message}} </span> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- sezione centrale -->
+                        <div class="middle-section">
+
+                            <!-- header della chat -->
+                            <div class="selectedUserIcon  justify-content-between align-items-center d-flex">
+                                    <div class="d-flex align-items-center mx-2">
+                                        <div class="cardPhoto">
+                                            <img src="img/minion.jpg" alt="">
+                                        </div>
+                                        <div class="infoProfile px-3">
+                                            <h6>Steav</h6>
+                                            <span class="preview">info testo chat</span>
+                                        </div>
+                                    </div>
+    
                                 <div class="icon">
-                                     <i class="fas fa-circle-notch"></i>
-                                     <i class="fas fa-comment-alt"></i>
-                                     <i class="fas fa-ellipsis-v"></i>
+                                    <i class="fas fa-search"></i>
+                                    <i class="fas fa-paperclip"></i>
+                                    <i class="fas fa-ellipsis-v"></i>
                                 </div>
                             </div>
-                            <div class="sidebarIcon"></div>
-                            <div class="py-3 d-flex newMessageNotification align-items-center">
-                                     <i class="fas fa-bell-slash"></i>
-                                 <div>
-                                     <h6>Ricevi notifiche di nuovi messaggi</h6>
-                                     <a href="#">Attiva notifiche desktop</a>
-                                 </div>
-                            </div> 
-                            <div class="searchcUserName">
-                                  <input  type="text"class="form-control" placeholder=" cerca o inizia una nuova chat..." >
- 
-                            </div>
 
 
-                            <div class="boxChatUserName flex-column">
-                                <div class="avatardContainer"  >
-                                    <div class="profileUser d-flex" v-for="elenco in contact">
-                                        
-                                        <div class="d-flex  align-items-center mx-2" >
+                            <!-- main della chat -->
 
-                                            <div class="cardPhoto" >
-                                                <img v-bind:src="elenco.avatar" alt="elenco.name">
+                            <div class="chatContainer">
+                                <div class="chatMessageBox grow-plus shrink-none">
+                                    <div class="d-flex"> 
+                                        <div class="messageRecived">
+                                            <div class="list-group-elemen">
+        
+                                                <ul class="list-group align-items-center">
+                                
+                                                    <li style="background-color: #FEFFFF; border-radius: 10px" d-flex class="list-group-item d-flex justify-content-between">testo da inserire
+                                
+                                                    </li> 
+                                                </ul>
                                             </div>
-                                            <div class="infoProfile px-3">
-                                                <h6>{{elenco.name}} </h6>
-                                                <span class="preview">{{elenco.message}} </span> 
+                                        </div>
+                                        <div class="messageSend">
+                                            <div class="list-group-elemen align-items-center"  >
+        
+                                                <ul class="list-group">
+                                
+                                                    <li style="background-color: #D5F9BE;border-radius: 10px" d-flex class="list-group-item recivedGreen d-flex justify-content-between">Testo da inserire
+                            
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
-                            
+                                
                                 </div>
                             </div>
+
+                            <!-- footer della chat -->
+
+                            <div class="chatFooter justify-content-between align-items-center d-flex">
+                                <div class="footerIcon"><i class="far fa-smile"></i></div>
+                            <div  class="chatBox"> <input  type="text"class="form-control" placeholder=" Scrivi un messaggio..." ></div>
+                                <div class="footerIcon"><i class="fas fa-microphone"></i></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="middle-section">
-                        <!-- header della chat -->
-                        <div class="selectedUserIcon  justify-content-between align-items-center d-flex">
-                                 <div class="d-flex align-items-center mx-2">
-                                     <div class="cardPhoto">
-                                         <img src="img/minion.jpg" alt="">
-                                     </div>
-                                     <div class="infoProfile px-3">
-                                         <h6>Steav</h6>
-                                         <span class="preview">info testo chat</span>
-                                     </div>
-                                 </div>
- 
-                             <div class="icon">
-                                 <i class="fas fa-search"></i>
-                                 <i class="fas fa-paperclip"></i>
-                                 <i class="fas fa-ellipsis-v"></i>
-                             </div>
-                        </div>
-
-
-                        <!-- main della chat -->
-
-                        <div class="chatContainer">
-                             <div class="chatMessageBox grow-plus shrink-none">
-                                 <div class="d-flex"> 
-                                    <div class="messageRecived">
-                                        <div class="list-group-elemen">
-    
-                                            <ul class="list-group align-items-center">
-                            
-                                                <li style="background-color: #FEFFFF; border-radius: 10px" d-flex class="list-group-item d-flex justify-content-between">testo da inserire
-                            
-                                                </li>
-                                               
-                                                
-                                            </ul>
-                                        </div>
-                                     </div>
-                                     <div class="messageSend">
-                                        <div class="list-group-elemen align-items-center"  >
-    
-                                            <ul class="list-group">
-                            
-                                                <li style="background-color: #D5F9BE;border-radius: 10px" d-flex class="list-group-item recivedGreen d-flex justify-content-between">Testo da inserire
-                        
-                                                </li>
-                                               
-                                                
-                                            </ul>
-                                        </div>
-                                     </div>
-                                 </div>
-                             
-                             </div>
-                        </div>
-
-                        <!-- footer della chat -->
-
-                        <div class="chatFooter justify-content-between align-items-center d-flex">
-                            <div class="footerIcon"><i class="far fa-smile"></i></div>
-                           <div  class="chatBox"> <input  type="text"class="form-control" placeholder=" Scrivi un messaggio..." ></div>
-                            <div class="footerIcon"><i class="fas fa-microphone"></i></div>
-                        </div>
-                    </div>
                   </div>
                </div>
+
+               <!-- barre di sfondo colorate -->
                <div class="top-stripe"></div>
                <div class="bottom-stripe"></div>
            </div>
