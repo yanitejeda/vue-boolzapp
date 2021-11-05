@@ -89,7 +89,7 @@
     padding: 12px;
     text-align: center;
 }
-.infoProfile, .newMessageNotification{
+.infoProfile, .newMessageNotification, .lineH{
     line-height: 5px;
 }
 
@@ -159,3 +159,17 @@ li{
     border: 1px solid  #E8E8E8;
     height: 100%;
 }
+
+
+.profileUser:hover{
+    background-color: #E8E8E8;
+}
+
+
+.profileUser:active{
+    background-color: #d8d8d8;
+}
+/* .profileUser:focus{
+    background-color: #d8d8d8;
+    color: red;
+} */

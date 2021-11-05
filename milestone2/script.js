@@ -4,7 +4,9 @@ Vue.config.devtools = true,
 new Vue ({
     el: "#root",
     data:{
-       
+        
+
+       index:0,
         contact:[
            {
             name:'Giulia',
@@ -78,10 +80,14 @@ new Vue ({
                 {
                 date: '10/01/2020 15:50:00',
                 text: 'Si, ma preferirei andare al cinema',
-                status: 'received'
+                status: 'received',
+                
                 }
                 ],},
             ],
        
+    },
+    methods:{
+
     },
 })
