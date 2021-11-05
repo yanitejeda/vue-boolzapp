@@ -136,6 +136,7 @@
 .chatMessageBox{
     background-image: url('../img/mine.jpg');
     flex-grow: 1;
+    padding-top: 20px;
 }
 .footerIcon{
     padding: 0 15px;
@@ -146,13 +147,23 @@
 .messageSend, .messageRecived{
     flex-grow: 1;
 }
+
+.messageRecived{
+    margin-top: 50px;
+}
 .messageSend{
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
-li{
+.boxMessage{
     max-width: 200px;
     margin: 10px 0;
+    padding: 10px;
+}
+
+.list-group{
+    width: 70%;
+    margin: 0 auto;
 }
 
 .avatardContainer{
@@ -169,7 +180,3 @@ li{
 .profileUser:active{
     background-color: #d8d8d8;
 }
-/* .profileUser:focus{
-    background-color: #d8d8d8;
-    color: red;
-} */

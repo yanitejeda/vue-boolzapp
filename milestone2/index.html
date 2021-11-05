@@ -113,47 +113,39 @@
 
                             <div class="chatContainer">
                                 <div class="chatMessageBox grow-plus shrink-none">
-                                    <div class="d-flex"> 
-                                        <div class="messageRecived">
-                                            <div class="list-group-elemen" v-for="elenco in contact[index].messages">
-        
-                                                <ul class="list-group align-items-center" >
-                                
-                                                    <li  style="background-color: #FEFFFF; border-radius: 10px" d-flex class="list-group-item d-flex justify-content-between">
+  
+                                                <div class="list-group d-flex  " v-for="elenco in contact[index].messages"  >
+
+                                                        <!-- tramite il v-if faccio vedere solo il messaggio che ha lo stato x  -->
+                                                    <div class='ms-auto boxMessage' v-if="elenco.status === 'sent' " style="background-color: #D5F9BE;border-radius: 10px" d-flex class="list-group-item recivedGreen d-flex justify-content-between">
+                                                        {{elenco.text}}
+                                                        
+                                                    </div>
+                                                        <!-- tramite il v-if faccio vedere solo il messaggio che ha lo stato y  -->
+
+                                                    <div  class='me-auto boxMessage' v-if="elenco.status === 'received' "  style="background-color: #FEFFFF; border-radius: 10px" d-flex class="list-group-item d-flex justify-content-between">
                                                         {{elenco.text}}
 
-                                                    </li> 
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="messageSend">
-                                            <div class="list-group-elemen align-items-center" v-for="elenco in contact[index].messages" >
-        
-                                                <ul class="list-group" >
-                                
-                                                    <li style="background-color: #D5F9BE;border-radius: 10px" d-flex class="list-group-item recivedGreen d-flex justify-content-between">
-                                                        {{elenco.text}}
-                            
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                
+                                                    </div> 
+                                                </div>
+                                                
                                 </div>
                             </div>
 
                             <!-- footer della chat -->
-
-                            <div class="chatFooter justify-content-between align-items-center d-flex">
-                                <div class="footerIcon"><i class="far fa-smile"></i></div>
-                            <div  class="chatBox"> 
-                                <input type="text" class="form-control" placeholder=" Scrivi un messaggio..." >
-                            </div>
-
-                                <div class="footerIcon"><i class="fas fa-microphone"></i></div>
+                            <div>
+                                <div class="chatFooter justify-content-between align-items-center d-flex">
+                                    <div class="footerIcon"><i class="far fa-smile"></i></div>
+                                <div  class="chatBox"> 
+                                    <input type="text" class="form-control" placeholder=" Scrivi un messaggio..." >
+                                </div>
+        
+                                    <div class="footerIcon"><i class="fas fa-microphone"></i></div>
+                                </div>
                             </div>
                         </div>
+                        
+                   
                   </div>
                </div>
 
