@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue" ></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Vue toolzapp</title>
+</head>
+<body>
+    <main>
+        <div id="root">
+          <div class="container">
+           <!--  <h1>hello</h1> -->
+
+           <div class="box-boolzapp">
+               <div class="boolzapp-window d-flex">
+                  <div class="d-flex box-all">
+                        <!-- side bar top -->
+                        <div class="side-bar">
+                            <div class="chatUsernames">
+
+                                <!-- foto personale -->
+                                <div class="sideBarTopIcon d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center mx-2">
+                                        <div class="cardPhoto">
+                                            <img src="img/luca.png" alt="">
+                                        </div>
+                                        <div class="lineH px-3">
+                                            <h6>io </h6>
+                                        </div>
+                                </div>
+
+                                <!-- icone innattive -->
+                                    <div class="icon">
+                                        <i class="fas fa-circle-notch"></i>
+                                        <i class="fas fa-comment-alt"></i>
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </div>
+                                </div>
+
+                                <!-- notifiche new message -->
+                                <div class="py-3 d-flex newMessageNotification align-items-center">
+                                        <i class="fas fa-bell-slash"></i>
+                                    <div>
+                                        <h6>Ricevi notifiche di nuovi messaggi</h6>
+                                        <a href="#">Attiva notifiche desktop</a>
+                                    </div>
+                                </div> 
+                                <!-- {{x}} - {{y}} -->
+                                <!-- barra di ricerca contatti -->
+                                <div class="searchcUserName  ">
+                                   <div class="d-flex search-box "> <span  class="input-group-text border-0 bg-w icon" id="basic-addon1"><i class="fas fa-search"></i></span>
+                                    <input  type="text" class="form-control border-0" v-model='ricercaUtente' placeholder=" cerca o inizia una nuova chat..." >
+                                    </div>
+                                </div>
+
+                                <!-- elenco dei contatti con chat attivi  -->
+                                <div class="boxChatUserName flex-column">
+                                    <div class="avatardContainer"  >
+                                        <div class="profileUser d-flex" v-for="(elenco,i) in contact" v-if="elenco.name.includes(ricercaUtente)">
+                                            
+                                            <div class="d-flex  py-3 mx-2" v-on:click.capture="index = i">
+
+                                                <div class="cardPhoto" >
+                                                    <img v-bind:src="elenco.avatar" alt="elenco.name">
+                                                </div>
+                                                
+                                                <div class="infoProfile py-2 px-3">
+                                                    <h6>{{elenco.name}} </h6>
+                                                    <span class="preview">{{elenco.messages[elenco.messages.length - 1 ].text}} </span> 
+                                                </div>
+                                                <div class="date-card"><span>{{elenco.messages[elenco.messages.length - 1 ].date}}</span></div>
+                                            </div>
+                                        </div>
+                                
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- sezione centrale -->
+                        <div class="middle-section">
+
+                            <!-- header della chat -->
+                            <div class="selectedUserIcon  justify-content-between align-items-center d-flex">
+                                    <div class="d-flex align-items-center mx-2">
+                                        <div class="cardPhoto">
+                                            <img :src="contact[index].avatar" alt="">
+                                        </div>
+                                        <div class="lineH py-2 px-3">
+                                            <h6>{{contact[index].name}}</h6>
+                                            <span class="preview">Ultimo accesso oggi alle {{contact[index].messages[contact[index].messages.length - 1].date}}</span>
+                                        </div>
+                                    </div>
+    
+                                <div class="icon">
+                                    <i class="fas fa-search"></i>
+                                    <i class="fas fa-paperclip"></i>
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </div>
+                            </div>
+
+
+                            <!-- main della chat -->
+
+                            <div class="chatContainer">
+                                <div class="chatMessageBox grow-plus shrink-none">
+  
+                                    <div class="list-group d-flex  " v-for="elenco in contact[index].messages"  >
+
+                                            <!-- tramite il v-if faccio vedere solo il messaggio che ha lo stato x  -->
+                                        <div class='ms-auto boxMessage' v-if="elenco.status === 'sent' " style="background-color: #D5F9BE;border-radius: 10px" d-flex class="list-group-item recivedGreen d-flex justify-content-between">
+                                            {{elenco.text}}
+                                            
+                                        </div>
+                                            <!-- tramite il v-if faccio vedere solo il messaggio che ha lo stato y  -->
+
+                                        <div  class='me-auto boxMessage' v-if="elenco.status === 'received' "  style="background-color: #FEFFFF; border-radius: 10px" d-flex class="list-group-item d-flex justify-content-between">
+                                                {{elenco.text}} 
+                        
+
+                                        </div> 
+                                    </div>
+                                                
+                                </div>
+                            </div>
+
+                            <!-- footer della chat -->
+                            <div>
+                                <div class="chatFooter justify-content-between align-items-center d-flex">
+                                    <div class="footerIcon"><i class="far fa-smile"></i></div>
+                                <div  class="chatBox"> 
+
+
+                                     <input type="text" v-on:keyup.enter="onPress()" class="form-control" v-model="newMessageSent" placeholder=" Scrivi un messaggio..." > 
+                                </div>
+        
+                                    <div class="footerIcon"><i class="fas fa-microphone"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                   
+                  </div>
+               </div>
+
+               <!-- barre di sfondo colorate -->
+               <div class="top-stripe"></div>
+               <div class="bottom-stripe"></div>
+           </div>
+          </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+    
+</body>
+</html>
