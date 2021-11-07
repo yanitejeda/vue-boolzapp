@@ -119,14 +119,15 @@
                                             <!-- tramite il v-if faccio vedere solo il messaggio che ha lo stato x  -->
                                         <div class='ms-auto boxMessage' v-if="elenco.status === 'sent' " style="background-color: #D5F9BE;border-radius: 10px" d-flex class="list-group-item recivedGreen d-flex justify-content-between">
                                             {{elenco.text}}
+
+                                            <div class="preview chat-time">{{elenco.date}}</div>
                                             
                                         </div>
                                             <!-- tramite il v-if faccio vedere solo il messaggio che ha lo stato y  -->
 
                                         <div  class='me-auto boxMessage' v-if="elenco.status === 'received' "  style="background-color: #FEFFFF; border-radius: 10px" d-flex class="list-group-item d-flex justify-content-between">
                                                 {{elenco.text}} 
-                        
-
+                                                <div class="preview chat-time">{{elenco.date}}</div>
                                         </div> 
                                     </div>
                                                 

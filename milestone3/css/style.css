@@ -86,7 +86,7 @@
     border-radius: 50px;
     width: 60px;
     height: 60px;
-    padding: 12px;
+    padding: 15px 12px;
     text-align: center;
 }
 .infoProfile, .newMessageNotification, .lineH{
@@ -156,7 +156,8 @@
 }
 
 .boxMessage{
-    max-width: 200px;
+    max-width: 250px;
+    min-width: 200px;
     margin: 10px 0;
     padding: 10px;
 }
@@ -179,4 +180,10 @@
 
 .profileUser:active{
     background-color: #d8d8d8;
+}
+
+
+.chat-time{
+    font-size: 10px;
+    text-align: right;
 }

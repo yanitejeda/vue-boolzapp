@@ -93,6 +93,7 @@ new Vue ({
     methods:{
         onPress(){
             let datanuova = new Date()
+
             this.contact[this.index].messages.push({ 
                 date: datanuova.toLocaleString('it'),
                 text: this.newMessageSent,
