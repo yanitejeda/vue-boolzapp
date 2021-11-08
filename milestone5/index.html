@@ -114,11 +114,12 @@
                             <div class="chatContainer">
                                 <div class="chatMessageBox grow-plus shrink-none">
   
-                                    <div class="list-group d-flex  " v-for="elenco in contact[index].messages"  >
+                                    <div class="list-group d-flex  " v-for="elenco,i in contact[index].messages"  >
 
                                             <!-- tramite il v-if faccio vedere solo il messaggio che ha lo stato x  -->
                                         <div class='ms-auto boxMessage' v-if="elenco.status === 'sent' " style="background-color: #D5F9BE;border-radius: 10px" d-flex class="list-group-item recivedGreen d-flex justify-content-between">
                                             {{elenco.text}}
+                                            <button v-on:click="onPressDeleted(i)"  type="button" class="btn-close deleted" aria-label="Close"></button>
                                            
                                             <div class="preview chat-time">{{elenco.date}}</div>
                                             
@@ -127,6 +128,8 @@
 
                                         <div  class='me-auto boxMessage' v-if="elenco.status === 'received' "  style="background-color: #FEFFFF; border-radius: 10px" d-flex class="list-group-item d-flex justify-content-between">
                                                 {{elenco.text}} 
+
+                                                 <button v-on:click="onPressDeleted(i)"  type="button" class="btn-close deleted" aria-label="Close"></button>
                                                 <div class="preview chat-time">{{elenco.date}}</div>
                                         </div> 
                                     </div>
