@@ -91,20 +91,30 @@ new Vue ({
 
 
     methods:{
+        //al clic 
         onPress(){
+            //calcolo data
             let datanuova = new Date()
-
+            //creo in oggetto da inserire nell'array
+            //il mio oggetto conterra data / messaggio / e chi ha scritto il messaggio
             this.contact[this.index].messages.push({ 
                 date: datanuova.toLocaleString('it'),
                 text: this.newMessageSent,
                 status: 'sent',
             })
+
+            //devo vuotare il contenitore del messaggio
             this.newMessageSent = '';
 
 
-            
+            //risposta automatica dopo 1s
             setTimeout(() => {
+
+              //calcolo data
                 datanuova = new Date();
+
+                //creo in oggetto da inserire nell'array
+                //il mio oggetto conterra data / messaggio / e chi ha scritto il messaggio
                 this.contact[this.index].messages.push({
                     date:datanuova.toLocaleString('it'),
                     text : 'ok',
